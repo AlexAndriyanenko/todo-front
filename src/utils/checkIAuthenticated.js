@@ -1,3 +1,1 @@
-export const checkAuthenticated = () => {
-    return localStorage.getItem('user') === 'main';
-};
+export const checkAuthenticated = () => localStorage.getItem('user') === 'main';

@@ -1,51 +1,51 @@
 import React from 'react';
-import TodoListAddCard from "../../../components/home/TodoListAddCard/TodoListAddCard";
-import TodoListAddModal from "../../../components/home/TodoListAddModal/TodoListAddModal";
-import {useDispatch} from "react-redux";
+import { useDispatch } from 'react-redux';
+import TodoListAddCard from '../../../components/home/TodoListAddCard/TodoListAddCard';
+import TodoListAddModal from '../../../components/home/TodoListAddModal/TodoListAddModal';
 
 // actions
-import {createTodoListActionCreator} from "../../../redux/actions/todos";
+import { createTodoListActionCreator } from '../../../redux/actions/todos';
 
 
 const TodoListAddCardContainer = () => {
-    const [opened, setOpened] = React.useState(false);
-    const [name, setName] = React.useState('');
-    const dispatch = useDispatch();
+  const [opened, setOpened] = React.useState(false);
+  const [name, setName] = React.useState('');
+  const dispatch = useDispatch();
 
-    const handleCardClick = () => {
-        setOpened(true);
-    };
+  const handleCardClick = () => {
+    setOpened(true);
+  };
 
-    const handleModalClose = () => {
-        setOpened(false);
-    };
+  const handleModalClose = () => {
+    setOpened(false);
+  };
 
-    const handleNameChange = (e) => {
-        setName(e.target.value);
-    };
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-        dispatch(createTodoListActionCreator(name));
+    dispatch(createTodoListActionCreator(name));
 
-        setName('');
-        setOpened(false);
-    };
+    setName('');
+    setOpened(false);
+  };
 
-    return (
-        <>
-            <TodoListAddCard onClick={handleCardClick}/>
+  return (
+    <>
+      <TodoListAddCard onClick={handleCardClick} />
 
-            <TodoListAddModal
-                isOpened={opened}
-                onClose={handleModalClose}
-                todoListName={name}
-                onNameChange={handleNameChange}
-                onSubmit={handleSubmit}
-            />
-        </>
-    );
+      <TodoListAddModal
+        isOpened={opened}
+        onClose={handleModalClose}
+        todoListName={name}
+        onNameChange={handleNameChange}
+        onSubmit={handleSubmit}
+      />
+    </>
+  );
 };
 
 export default TodoListAddCardContainer;
