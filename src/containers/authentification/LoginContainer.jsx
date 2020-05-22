@@ -26,8 +26,6 @@ const LoginContainer = ({history}) => {
         }
     };
 
-    console.log(isAuthenticated);
-
     return (
         <>
             {isAuthenticated ?

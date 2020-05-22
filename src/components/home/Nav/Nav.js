@@ -24,7 +24,7 @@ const Nav = ({ login }) => {
 
     return (
         <Paper className={classes.container}>
-            <Grid container xs={12} direction="row" justify="center" alignItems="center">
+            <Grid container direction="row" justify="center" alignItems="center">
                 <div>
                     <Avatar className={classes.avatar}> {login[0].toUpperCase()} </Avatar>
                 </div>

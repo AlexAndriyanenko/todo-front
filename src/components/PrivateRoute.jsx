@@ -1,6 +1,6 @@
 import React from 'react';
 import {Redirect, Route} from 'react-router';
-import Home from "./home/Home";
+import HomeContainer from "../containers/home/HomeContainer";
 
 const PrivateRoute = ({component, ...rest}) => {
     const isAuthenticated = localStorage.getItem('user') === 'main';
@@ -9,7 +9,7 @@ const PrivateRoute = ({component, ...rest}) => {
         <Route {...rest} render={() => (
             <>
                 {isAuthenticated ? (
-                    <Home/>
+                    <HomeContainer />
                 ) : (
                     <Redirect to="/login"/>
                 )}
