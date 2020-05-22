@@ -33,7 +33,6 @@ const LoginContainer = ({ history }) => {
         ? <Redirect to="/home" />
         : (
           <Login
-            history={history}
             onSubmit={submitLogin}
             login={login}
             onLoginChange={changeLogin}
