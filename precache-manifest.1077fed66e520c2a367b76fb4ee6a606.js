@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "415526cfee3ee3d841d6377d185bd8bb",
+    "revision": "041546fd8165299ff93d54eb989e288c",
     "url": "https://alexandriyanenko.github.io/todo-front/index.html"
   },
   {
-    "revision": "a333d7de7d172e6d09aa",
+    "revision": "4f997d97d17f59b41fd5",
     "url": "https://alexandriyanenko.github.io/todo-front/static/css/main.3153aa2c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://alexandriyanenko.github.io/todo-front/static/js/2.4a148a05.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a333d7de7d172e6d09aa",
-    "url": "https://alexandriyanenko.github.io/todo-front/static/js/main.2649fff1.chunk.js"
+    "revision": "4f997d97d17f59b41fd5",
+    "url": "https://alexandriyanenko.github.io/todo-front/static/js/main.6ff11abe.chunk.js"
   },
   {
     "revision": "93c807419e606053d4b6",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://alexandriyanenko.github.io/todo-front/precache-manifest.dac7108df6cfb4535b41c47fe6457af2.js"
+  "https://alexandriyanenko.github.io/todo-front/precache-manifest.1077fed66e520c2a367b76fb4ee6a606.js"
 );
 
 self.addEventListener('message', (event) => {
