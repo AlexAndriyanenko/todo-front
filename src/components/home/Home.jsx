@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from "./Sidebar/Sidebar";
+import NavContainer from "../../containers/home/NavContainer/NavContainer";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
@@ -15,7 +15,7 @@ const Home = () => {
 
 	return (
 		<div className={classes.container}>
-			<Sidebar />
+			<NavContainer />
 		</div>
 	)
 };
