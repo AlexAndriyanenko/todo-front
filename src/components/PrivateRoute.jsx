@@ -9,7 +9,7 @@ const PrivateRoute = ({component, ...rest}) => {
         <Route {...rest} render={() => (
             <>
                 {isAuthenticated ? (
-                    <HomeContainer />
+                    <HomeContainer/>
                 ) : (
                     <Redirect to="/login"/>
                 )}

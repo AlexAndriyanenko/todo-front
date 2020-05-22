@@ -1,10 +1,10 @@
 import React from 'react';
 import TodoListAddCard from "../../../components/home/TodoListAddCard/TodoListAddCard";
 import TodoListAddModal from "../../../components/home/TodoListAddModal/TodoListAddModal";
-import { useDispatch } from "react-redux";
+import {useDispatch} from "react-redux";
 
 // actions
-import { createTodoListActionCreator } from "../../../redux/actions/todos";
+import {createTodoListActionCreator} from "../../../redux/actions/todos";
 
 
 const TodoListAddCardContainer = () => {
@@ -35,7 +35,7 @@ const TodoListAddCardContainer = () => {
 
     return (
         <>
-            <TodoListAddCard onClick={handleCardClick} />
+            <TodoListAddCard onClick={handleCardClick}/>
 
             <TodoListAddModal
                 isOpened={opened}

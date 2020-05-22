@@ -3,7 +3,7 @@ import Login from "../../components/authentification/Login";
 import {withRouter} from "react-router";
 import {Redirect} from 'react-router-dom';
 import {useSelector, useDispatch} from "react-redux";
-import {checkAuthenticated} from "../../components/utils/checkIAuthenticated";
+import {checkAuthenticated} from "../../utils/checkIAuthenticated";
 
 // actions
 import {changeLoginActionCreator, submitLoginActionCreator} from "../../redux/actions/auth";

@@ -5,7 +5,7 @@ const NavContainer = () => {
     const login = localStorage.getItem('user');
 
     return (
-        <Nav login={login} />
+        <Nav login={login}/>
     )
 };
 

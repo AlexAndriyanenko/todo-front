@@ -7,14 +7,14 @@ import {
     TOGGLE_TODO,
     DELETE_TODO,
 } from "../actions/todos";
-import { generateId } from "../../utils/generateId";
+import {generateId} from "../../utils/generateId";
 
 const initialState = {
     todoLists: [],
 };
 
 export const todosReducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case CREATE_TODO_LIST:
             return {
                 ...state,
@@ -31,14 +31,14 @@ export const todosReducer = (state = initialState, action) => {
             return {
                 ...state,
                 todoLists: state.todoLists.map((todoList) => {
-                   if (todoList.id === action.id) {
-                       return {
-                           ...todoList,
-                           name: action.name,
-                       }
-                   }
+                    if (todoList.id === action.id) {
+                        return {
+                            ...todoList,
+                            name: action.name,
+                        }
+                    }
 
-                   return todoList;
+                    return todoList;
                 }),
             };
         case DELETE_TODO_LIST:

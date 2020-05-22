@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 export const useStyles = makeStyles(theme => ({
@@ -26,12 +26,12 @@ export const useStyles = makeStyles(theme => ({
     },
 }));
 
-const Login = ({ onSubmit, login, onLoginChange }) => {
+const Login = ({onSubmit, login, onLoginChange}) => {
     const classes = useStyles();
 
     return (
         <Container component="main" maxWidth="xs">
-            <CssBaseline />
+            <CssBaseline/>
             <div className={classes.paper}>
                 <Typography component="h1" variant="h5">
                     Sign in
