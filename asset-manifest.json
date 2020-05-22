@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "https://AlexAndriyanenko.github.io/todo-front/static/css/main.3153aa2c.chunk.css",
-    "main.js": "https://AlexAndriyanenko.github.io/todo-front/static/js/main.cfd5b24f.chunk.js",
-    "main.js.map": "https://AlexAndriyanenko.github.io/todo-front/static/js/main.cfd5b24f.chunk.js.map",
+    "main.js": "https://AlexAndriyanenko.github.io/todo-front/static/js/main.8be0cfd2.chunk.js",
+    "main.js.map": "https://AlexAndriyanenko.github.io/todo-front/static/js/main.8be0cfd2.chunk.js.map",
     "runtime-main.js": "https://AlexAndriyanenko.github.io/todo-front/static/js/runtime-main.a2c811eb.js",
     "runtime-main.js.map": "https://AlexAndriyanenko.github.io/todo-front/static/js/runtime-main.a2c811eb.js.map",
-    "static/js/2.95fe8443.chunk.js": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.95fe8443.chunk.js",
-    "static/js/2.95fe8443.chunk.js.map": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.95fe8443.chunk.js.map",
+    "static/js/2.4a148a05.chunk.js": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.4a148a05.chunk.js",
+    "static/js/2.4a148a05.chunk.js.map": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.4a148a05.chunk.js.map",
     "index.html": "https://AlexAndriyanenko.github.io/todo-front/index.html",
-    "precache-manifest.4b4f9d1aa4d62cedabfa1d3f7a9f8676.js": "https://AlexAndriyanenko.github.io/todo-front/precache-manifest.4b4f9d1aa4d62cedabfa1d3f7a9f8676.js",
+    "precache-manifest.f08637a235d92e0e01d8855b25782708.js": "https://AlexAndriyanenko.github.io/todo-front/precache-manifest.f08637a235d92e0e01d8855b25782708.js",
     "service-worker.js": "https://AlexAndriyanenko.github.io/todo-front/service-worker.js",
     "static/css/main.3153aa2c.chunk.css.map": "https://AlexAndriyanenko.github.io/todo-front/static/css/main.3153aa2c.chunk.css.map",
-    "static/js/2.95fe8443.chunk.js.LICENSE.txt": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.95fe8443.chunk.js.LICENSE.txt"
+    "static/js/2.4a148a05.chunk.js.LICENSE.txt": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.4a148a05.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a2c811eb.js",
-    "static/js/2.95fe8443.chunk.js",
+    "static/js/2.4a148a05.chunk.js",
     "static/css/main.3153aa2c.chunk.css",
-    "static/js/main.cfd5b24f.chunk.js"
+    "static/js/main.8be0cfd2.chunk.js"
   ]
 }
