@@ -40,6 +40,7 @@ const TodoListAddModal = ({
               label="To Do List Name"
               value={name}
               onChange={onNameChange}
+              autoFocus
             />
 
             <Button
