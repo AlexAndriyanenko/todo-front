@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "48cfec07bf793d0cb3de8e8af72de8f9",
+    "revision": "d8505ef5991e75e576b9fc5e16d63372",
     "url": "https://AlexAndriyanenko.github.io/todo-front/index.html"
   },
   {
-    "revision": "bfb58606698028a5ac06",
+    "revision": "6a36214ec43addbdd733",
     "url": "https://AlexAndriyanenko.github.io/todo-front/static/css/main.b158bb81.chunk.css"
   },
   {
-    "revision": "a5d6bf1f88211a580c88",
-    "url": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.437b7291.chunk.js"
+    "revision": "51406921eaeb5fae51d4",
+    "url": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.b997fcdd.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.437b7291.chunk.js.LICENSE.txt"
+    "url": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.b997fcdd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bfb58606698028a5ac06",
-    "url": "https://AlexAndriyanenko.github.io/todo-front/static/js/main.ae87192b.chunk.js"
+    "revision": "6a36214ec43addbdd733",
+    "url": "https://AlexAndriyanenko.github.io/todo-front/static/js/main.5ec824e8.chunk.js"
   },
   {
     "revision": "c8d52ec0c902e3532191",
