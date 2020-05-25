@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "https://alexandriyanenko.github.io/todo-front/static/css/main.3153aa2c.chunk.css",
-    "main.js": "https://alexandriyanenko.github.io/todo-front/static/js/main.834860c3.chunk.js",
-    "main.js.map": "https://alexandriyanenko.github.io/todo-front/static/js/main.834860c3.chunk.js.map",
-    "runtime-main.js": "https://alexandriyanenko.github.io/todo-front/static/js/runtime-main.bda72041.js",
-    "runtime-main.js.map": "https://alexandriyanenko.github.io/todo-front/static/js/runtime-main.bda72041.js.map",
-    "static/js/2.4a148a05.chunk.js": "https://alexandriyanenko.github.io/todo-front/static/js/2.4a148a05.chunk.js",
-    "static/js/2.4a148a05.chunk.js.map": "https://alexandriyanenko.github.io/todo-front/static/js/2.4a148a05.chunk.js.map",
-    "index.html": "https://alexandriyanenko.github.io/todo-front/index.html",
-    "precache-manifest.f12ef33ccdf1b621625141ac5f0b74f1.js": "https://alexandriyanenko.github.io/todo-front/precache-manifest.f12ef33ccdf1b621625141ac5f0b74f1.js",
-    "service-worker.js": "https://alexandriyanenko.github.io/todo-front/service-worker.js",
-    "static/css/main.3153aa2c.chunk.css.map": "https://alexandriyanenko.github.io/todo-front/static/css/main.3153aa2c.chunk.css.map",
-    "static/js/2.4a148a05.chunk.js.LICENSE.txt": "https://alexandriyanenko.github.io/todo-front/static/js/2.4a148a05.chunk.js.LICENSE.txt"
+    "main.css": "https://AlexAndriyanenko.github.io/todo-front/static/css/main.b158bb81.chunk.css",
+    "main.js": "https://AlexAndriyanenko.github.io/todo-front/static/js/main.ae87192b.chunk.js",
+    "main.js.map": "https://AlexAndriyanenko.github.io/todo-front/static/js/main.ae87192b.chunk.js.map",
+    "runtime-main.js": "https://AlexAndriyanenko.github.io/todo-front/static/js/runtime-main.a2c811eb.js",
+    "runtime-main.js.map": "https://AlexAndriyanenko.github.io/todo-front/static/js/runtime-main.a2c811eb.js.map",
+    "static/js/2.437b7291.chunk.js": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.437b7291.chunk.js",
+    "static/js/2.437b7291.chunk.js.map": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.437b7291.chunk.js.map",
+    "index.html": "https://AlexAndriyanenko.github.io/todo-front/index.html",
+    "precache-manifest.3b2904de847d05092690bda84889a319.js": "https://AlexAndriyanenko.github.io/todo-front/precache-manifest.3b2904de847d05092690bda84889a319.js",
+    "service-worker.js": "https://AlexAndriyanenko.github.io/todo-front/service-worker.js",
+    "static/css/main.b158bb81.chunk.css.map": "https://AlexAndriyanenko.github.io/todo-front/static/css/main.b158bb81.chunk.css.map",
+    "static/js/2.437b7291.chunk.js.LICENSE.txt": "https://AlexAndriyanenko.github.io/todo-front/static/js/2.437b7291.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bda72041.js",
-    "static/js/2.4a148a05.chunk.js",
-    "static/css/main.3153aa2c.chunk.css",
-    "static/js/main.834860c3.chunk.js"
+    "static/js/runtime-main.a2c811eb.js",
+    "static/js/2.437b7291.chunk.js",
+    "static/css/main.b158bb81.chunk.css",
+    "static/js/main.ae87192b.chunk.js"
   ]
 }
