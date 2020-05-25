@@ -1,7 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Checkbox from '@material-ui/core/Checkbox';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import CancelBtn from '../../styled/CancelBtn';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -9,8 +10,20 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+const DeleteBtn = withStyles(() => ({
+  root: {
+    minWidth: '21px',
+    maxWidth: '21px',
+    minHeight: '21px',
+    maxHeight: '21px',
+    '& svg': {
+      fontSize: '12px',
+    },
+  },
+}))(CancelBtn);
+
 // eslint-disable-next-line react/prop-types
-const TodoItem = ({ content, isChecked, toggleChecked }) => {
+const TodoItem = ({ content, isChecked, toggleChecked, onTodoItemDelete, }) => {
   const classes = useStyles();
 
   return (
@@ -19,11 +32,14 @@ const TodoItem = ({ content, isChecked, toggleChecked }) => {
         {content}
       </div>
 
-      <Checkbox
-        checked={isChecked}
-        onChange={toggleChecked}
-        inputProps={{ 'aria-label': 'primary checkbox' }}
-      />
+      <div>
+        <Checkbox
+          checked={isChecked}
+          onChange={toggleChecked}
+          inputProps={{ 'aria-label': 'primary checkbox' }}
+        />
+        <DeleteBtn onClick={onTodoItemDelete} />
+      </div>
     </Grid>
   );
 };

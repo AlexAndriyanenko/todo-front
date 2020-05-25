@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import TodoItem from '../../../components/home/TodoItem/TodoItem';
-import { toggleTodoActionCreator } from '../../../redux/actions/todos';
+import { toggleTodoActionCreator, deleteTodoActionCreator } from '../../../redux/actions/todos';
 
 // eslint-disable-next-line react/prop-types
 const TodoItemContainer = ({
@@ -13,11 +13,16 @@ const TodoItemContainer = ({
     dispatch(toggleTodoActionCreator(todoListId, id));
   };
 
+  const handleTodoItemDelete = () => {
+    dispatch(deleteTodoActionCreator(todoListId, id));
+  };
+
   return (
     <TodoItem
       content={content}
       isChecked={isChecked}
       toggleChecked={toggleChecked}
+      onTodoItemDelete={handleTodoItemDelete}
     />
   );
 };
