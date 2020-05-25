@@ -1,23 +1,23 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import TodoListAddCard from '../../../components/home/TodoListAddCard/TodoListAddCard';
-import TodoListAddModal from '../../../components/home/TodoListAddModal/TodoListAddModal';
 
 // actions
 import { createTodoListActionCreator } from '../../../redux/actions/todos';
 
 
 const TodoListAddCardContainer = () => {
-  const [opened, setOpened] = React.useState(false);
+  const [addingTodoList, setAdding] = React.useState(false);
   const [name, setName] = React.useState('');
   const dispatch = useDispatch();
 
-  const handleCardClick = () => {
-    setOpened(true);
+  const toggleAdding = () => {
+    setAdding(!addingTodoList);
   };
 
-  const handleModalClose = () => {
-    setOpened(false);
+  const handleAddTodoListCancel = () => {
+    setName('');
+    toggleAdding();
   };
 
   const handleNameChange = (e) => {
@@ -30,21 +30,18 @@ const TodoListAddCardContainer = () => {
     dispatch(createTodoListActionCreator(name));
 
     setName('');
-    setOpened(false);
+    toggleAdding();
   };
 
   return (
-    <>
-      <TodoListAddCard onClick={handleCardClick} />
-
-      <TodoListAddModal
-        isOpened={opened}
-        onClose={handleModalClose}
-        todoListName={name}
-        onNameChange={handleNameChange}
-        onSubmit={handleSubmit}
-      />
-    </>
+    <TodoListAddCard
+      addingTodoList={addingTodoList}
+      toggleAdding={toggleAdding}
+      name={name}
+      onNameChange={handleNameChange}
+      onAddTodoListCancel={handleAddTodoListCancel}
+      onSubmit={handleSubmit}
+    />
   );
 };
 

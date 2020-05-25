@@ -1,11 +1,12 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import {makeStyles, withStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
-import CloseIcon from '@material-ui/icons/Close';
-import {lightGreen, deepOrange} from "@material-ui/core/colors";
+import CancelBtn from '../../styled/CancelBtn';
+import TodoItemContainer from '../../../containers/home/TodoItemContainer/TodoItemContainer';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -32,52 +33,32 @@ const useStyles = makeStyles(() => ({
     fontSize: '18px',
     textTransform: 'capitalize',
   },
-  icon: {
-    fontSize: '16px',
-    color: '#000',
-  },
   addTodoForm: {
-    display: 'flex',
-    flexFlow: 'column nowrap',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '100%',
     margin: '10px 15px',
   },
   buttons: {
     marginTop: '15px',
   },
+  submitBtn: {
+    marginRight: '10px',
+  },
 }));
 
-const SubmitBtn = withStyles(() => ({
-  root: {
-    minWidth: '80px',
-    maxWidth: '80px',
-    textAlign: 'center',
-    backgroundColor: lightGreen[500],
-    color: '#fff',
-    '&:hover': {
-      backgroundColor: lightGreen[700],
-      color: '#fff',
-    },
-  },
-}))(Button);
-
-const CancelBtn = withStyles(() => ({
-  root: {
-    minWidth: '30px',
-    maxWIdth: '30px',
-    textAlign: 'center',
-    backgroundColor: deepOrange[500],
-    color: '#fff',
-    '&:hover': {
-      backgroundColor: deepOrange[600],
-    },
-  },
-}))(Button);
-
-// eslint-disable-next-line react/prop-types,max-len
-const TodoListCard = ({name, onNameChange, isEditing, toggleEditing, onNameKeyDown, todos, addingTodo, toggleAdding, todoContent, onTodoContentChange}) => {
+const TodoListCard = ({
+  id,
+  onSubmit,
+  name,
+  onNameChange,
+  isEditing,
+  toggleEditing,
+  onNameKeyDown,
+  todos,
+  addingTodo,
+  toggleAdding,
+  todoItemContent,
+  onTodoItemContentChange,
+  onAddTodoItemCancel,
+}) => {
   const classes = useStyles();
 
   return (
@@ -98,28 +79,35 @@ const TodoListCard = ({name, onNameChange, isEditing, toggleEditing, onNameKeyDo
         </div>
       )}
 
+      {todos.map((todo) => <TodoItemContainer key={todo.id} todoListId={id} {...todo} />)}
 
       {addingTodo ? (
-        <div className={classes.addTodoForm}>
-          <TextField
-            varitant="outlined"
-            value={todoContent}
-            onChange={onTodoContentChange}
-            autoFocus
-          />
+        <form className={classes.addTodoForm} onSubmit={onSubmit}>
+          <Grid container direction="column" justify="center" alignItems="center">
+            <TextField
+              label="To Do Item Content"
+              varitant="outlined"
+              value={todoItemContent}
+              onChange={onTodoItemContentChange}
+              autoFocus
+            />
 
-          <div className={classes.buttons}>
-            <SubmitBtn> Submit </SubmitBtn>
-            <CancelBtn className={classes.cancelBtn}>
-              {' '}
-              <CloseIcon />
-              {' '}
-            </CancelBtn>
-          </div>
-        </div>
+            <Grid className={classes.buttons} container direction="row" justify="flex-start">
+              <Button
+                className={classes.submitBtn}
+                type="submit"
+                variant="outlined"
+                color="primary"
+              >
+                Submit
+              </Button>
+              <CancelBtn onClick={onAddTodoItemCancel} />
+            </Grid>
+          </Grid>
+        </form>
       ) : (
         <Button className={classes.addBtn} variant="outlined" color="default" onClick={toggleAdding}>
-          <AddOutlinedIcon className={classes.icon}/>
+          <AddOutlinedIcon className={classes.icon} />
 
           Add todo item
         </Button>

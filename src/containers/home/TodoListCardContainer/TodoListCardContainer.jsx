@@ -1,12 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import TodoListCard from '../../../components/home/TodoListCard/TodoListCard';
-import { changeTodoListNameActionCreator } from '../../../redux/actions/todos';
+import { changeTodoListNameActionCreator, createTodoActionCreator } from '../../../redux/actions/todos';
 
 // eslint-disable-next-line react/prop-types
-const TodoListCardContainer = ({ id, name }) => {
+const TodoListCardContainer = ({ id, name, todos }) => {
   const [isEditing, setEditing] = React.useState(false);
   const [addingTodo, setAdding] = React.useState(false);
+  const [todoItemContent, setTodoItemContent] = React.useState('');
   const dispatch = useDispatch();
 
   const toggleEditing = () => {
@@ -15,6 +16,15 @@ const TodoListCardContainer = ({ id, name }) => {
 
   const toggleAdding = () => {
     setAdding(!addingTodo);
+  };
+
+  const handleTodoItemContentChange = (e) => {
+    setTodoItemContent(e.target.value);
+  };
+
+  const handleAddTodoItemCancel = () => {
+    setTodoItemContent('');
+    toggleAdding();
   };
 
   const handleNameChange = (e) => {
@@ -27,8 +37,19 @@ const TodoListCardContainer = ({ id, name }) => {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch(createTodoActionCreator(id, todoItemContent));
+    setTodoItemContent('');
+    toggleAdding();
+  };
+
   return (
     <TodoListCard
+      id={id}
+      onSubmit={handleSubmit}
+      todos={todos}
       name={name}
       onNameChange={handleNameChange}
       isEditing={isEditing}
@@ -36,6 +57,9 @@ const TodoListCardContainer = ({ id, name }) => {
       onNameKeyDown={handleNameKeyDown}
       addingTodo={addingTodo}
       toggleAdding={toggleAdding}
+      todoItemContent={todoItemContent}
+      onTodoItemContentChange={handleTodoItemContentChange}
+      onAddTodoItemCancel={handleAddTodoItemCancel}
     />
   );
 };
