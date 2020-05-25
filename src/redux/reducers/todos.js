@@ -44,7 +44,7 @@ export const todosReducer = (state = initialState, action) => {
         case DELETE_TODO_LIST:
             return {
                 ...state,
-                todoLists: state.todoLists.filter((todoList) => todoList.id === action.id),
+                todoLists: state.todoLists.filter((todoList) => todoList.id !== action.id),
             };
         case CREATE_TODO:
             return {
@@ -120,7 +120,7 @@ export const todosReducer = (state = initialState, action) => {
                     if (todoList.id === action.todoListId) {
                         return {
                             ...todoList,
-                            todos: todoList.todos.filter((todo) => todo.id === action.todoId)
+                            todos: todoList.todos.filter((todo) => todo.id !== action.todoId)
                         }
                     }
 
